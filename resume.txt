@@ -1,0 +1,63 @@
+Karan Poddar
+karanpodar@gmail.com
++91 9176204117
+github.com/karanpodar
+birth date - 27 May 1998
+Notice period - 60 days officially but can negotiate and bring it down to 15 to 30 days 
+
+Summary
+
+Innovative Machine Learning Engineer with 5.2+ years of experience in banking and insurance sectors. Skilled in
+developing AI-driven solutions that significantly improve operational efficiency and customer experience. Expertise in
+NLP, predictive modeling, and full-stack development. Proven track record of reducing costs, optimizing processes, and
+delivering high-impact projects ahead of schedule. Adept at leveraging cloud technologies and mainframe systems to
+create robust, scalable solutions.
+
+
+Technical Skills
+ Domain: Insurance (Property), Banking (Unsecured Lending– Credit Cards & Loans)
+ Languages: Python, COBOL, JCL, CICS, Rexx, Gherkin
+ Frameworks: FastAPI, Django, StreamLit, Karate, Selenium, Groovy
+ Developer Tools: Git, Jenkins, Amazon Web Service (AWS), VS Code, PyCharm, IntelliJ, Openshift, Jira, Rally,
+ Confluence, Git, BitBucket
+ Libraries: pandas, NumPy, Matplotlib, scikit-learn, Tensorflow, Pytorch
+ Mainframe Tools: Endevor, VSAM, TSO, IBM File-manager, CA-File Manager, Excalibur, IBM File-Aid, ISPF, MQ
+ Manager, DB2, CICS Debugger
+ Machine Learning: GenAI (Generative AI), Predictive Modelling, Prompt Engineering, Sentiment Analysis,
+ Regression Algorithms, Classification Algorithms, Natural Language Processing (NLP), Feature Engineering, Data
+ Visualization, Exploratory Data Analysis (EDA), RAG, Large Language Models (LLM)
+ Cloud Services: Elastic Container Service, CloudWatch, S3, Boto3, Bedrock, Sagemaker
+
+
+WORK EXPERIENCE
+Barclays (Machine Learning Engineer)	May 2022 – Present
+Designed and developed a Contextual Search Engine leveraging NLP, Text Similarity, and Semantic Search, improving search efficiency by 30%.
+Developed a Generative AI-based Complaints Workflow Management System utilizing NLU, text summarization, and multiclass text classification, reducing complaint resolution time by 40%.
+Created a Loan Repayment Prognosticator proof of concept using a supervised learning algorithm to prevent bank from disbursing loans to default-prone customers or refactoring affordability with high repayment risks.
+Leveraged Python and Machine Learning to implement optimization techniques, reducing model over-fitting by 20% and increasing model accuracy and practicality.
+Developed an Internal Full Stack Web Application with Python functions and Streamlit to compare Deployment configurations, saving around 0.2 FTE per resource.
+Developed a Jenkins Pipeline to generate Bit bucket commit and PR reports, to have a track of commits and Pull Requests based on different criteria’s.
+Built a Process automation to trigger a reminder mail for all the Jira issues open for a longer period of time
+
+Testing projects worked upon in Barclays as a API Automation Tester
+Accessibility & Vulnerability Markers –Adapt and improve the current Eligibility Markers, and add a new Accessibility Marker (Differently-abled Customer) for Letter Delivery.
+Ogone Replacement – Add new Oracle DB call to existing Billing Enquiry API and remediate the existing flow.
+CRD4 Score Replacement – Replacing the existing customer scoring system with a new enhanced PD4M & Capital PD Scoring system, as a part of regulatory & compliance change.
+OMS Remediation – Remediation of existing offer management system to fix the flaws and optimize performance issues.
+Produced over 1065 repeatable automated test cases, saving almost two FTEs in total.
+
+LTI (Mainframe Developer)	May 2019 – May 2022
+• Exhibited an unwavering record of success in fixing 21 Production Known Errors (PKEs), which resulted in a
+ notable drop in the volume of customer complaints
+• Delivered the California Fire-line Score fifteen days ahead of schedule. This was a significant regulatory project,
+ and any problems or delays would have resulted in fines for the company amounting to millions of dollars
+• Worked on migrating the Property Insurance policies from Quantum Homes to Quantum Homes 2.0, which
+ was the most competitive offering in the market increasing the number of newly issued policies by over 43%
+• Designed and developed a brand-new system known as Reason For Change (RFC) codes, which was developed to
+ send a change code to customers anytime they modify their policy, saving in millions for the client
+
+Achievements
+ • Won Code-a-thon 2.0 (Dec ‘23) at Barclays for pitching ideas that would save approx. 3M GBP to the bank
+ • Received ‘Most Valuable Player’ Award for the month of Sep ’21
+ • Received ‘Spot Award for Quality Assurance’ for the month of Aug ’23
+ • Had a own quick commerce startup called Paradox in 2018s
