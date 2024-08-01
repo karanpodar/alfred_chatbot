@@ -2,8 +2,9 @@ Karan Poddar
 karanpodar@gmail.com
 +91 9176204117
 github.com/karanpodar
-birth date - 27 May 1998
-Notice period - 60 days officially but can negotiate and bring it down to 15 to 30 days 
+birth date - 27 May 1998 (Age - 26)
+Notice period - 60 days officially but can negotiate and bring it down to 15 to 30 days
+Gender - Male
 
 Summary
 
@@ -36,8 +37,8 @@ Developed a Generative AI-based Complaints Workflow Management System utilizing 
 Created a Loan Repayment Prognosticator proof of concept using a supervised learning algorithm to prevent bank from disbursing loans to default-prone customers or refactoring affordability with high repayment risks.
 Leveraged Python and Machine Learning to implement optimization techniques, reducing model over-fitting by 20% and increasing model accuracy and practicality.
 Developed an Internal Full Stack Web Application with Python functions and Streamlit to compare Deployment configurations, saving around 0.2 FTE per resource.
-Developed a Jenkins Pipeline to generate Bit bucket commit and PR reports, to have a track of commits and Pull Requests based on different criteria’s.
-Built a Process automation to trigger a reminder mail for all the Jira issues open for a longer period of time
+Developed a Jenkins CI/CD Pipeline to generate Bit bucket commit and PR reports, to have a track of commits and Pull Requests based on different criteria’s.
+Built a Process automation using CI/CD pipeline to trigger a reminder mail for all the Jira issues open for a longer period of time
 
 Testing projects worked upon in Barclays as a API Automation Tester
 Accessibility & Vulnerability Markers –Adapt and improve the current Eligibility Markers, and add a new Accessibility Marker (Differently-abled Customer) for Letter Delivery.
