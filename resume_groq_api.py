@@ -5,9 +5,10 @@ import os
 def groq_prompt(user_prompt: str):
     # groq_api_key = os.getenv("GROQ_API_KEY")
     # llama_model = "llama3-70b-8192"
+    # llama_model = "llama-3.1-8b-instant"
 
     groq_api_key = st.secrets["GROQ_API_KEY"]
-    llama_model = "llama-3.1-8b-instant"
+    llama_model = "llama-3.1-70b-versatile"
 
     client = Groq(api_key=groq_api_key)
 
