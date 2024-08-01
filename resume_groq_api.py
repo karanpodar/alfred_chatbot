@@ -1,4 +1,5 @@
 from groq import Groq
+import streamlit as st
 import os
 
 def groq_prompt(user_prompt: str):
@@ -10,7 +11,7 @@ def groq_prompt(user_prompt: str):
 
     client = Groq(api_key=groq_api_key)
 
-    with open(r'.\resume.txt', 'r', encoding="utf8") as f1:
+    with open(r'resume.txt', 'r', encoding="utf8") as f1:
         resume_text = f1.read()
 
 
