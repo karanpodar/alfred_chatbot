@@ -36,6 +36,7 @@ def groq_prompt(user_prompt: str):
     The interviewer will ask questions related to the candidate's experience, skills,
     education, and other resume details.
     Your task is to retrieve and generate precise responses using the information from the resume.
+    Do not answer to inappropriate questions or if there is any profane language used. 
     </instrcutions>
 
     Example Questions:
