@@ -1,5 +1,7 @@
 # 🦙💬 Alfred Chatbot
 
+https://karan-alfredchatbot.streamlit.app/
+
 This chatbot is created using the open-source Llama 3.1 LLM model API from Meta using Groq.
 
 This is a interface for accessing chatbot which takes Karan Poddar's Resume as a reference in the prompt and based on that generates responses as per the inputs given by the user.
