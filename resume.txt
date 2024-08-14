@@ -3,7 +3,8 @@ karanpodar@gmail.com
 +91 9176204117
 github.com/karanpodar
 birth date - 27 May 1998 (Age - 26)
-Notice period - 60 days officially but can negotiate and bring it down to 15 to 30 days
+Notice period - Serving
+Last Working day (LWD) - Oct 13, 2024
 Gender - Male
 
 Summary
@@ -26,7 +27,7 @@ Technical Skills
  Manager, DB2, CICS Debugger
  Machine Learning: GenAI (Generative AI), Predictive Modelling, Prompt Engineering, Sentiment Analysis,
  Regression Algorithms, Classification Algorithms, Natural Language Processing (NLP), Feature Engineering, Data
- Visualization, Exploratory Data Analysis (EDA), RAG, Large Language Models (LLM)
+ Visualization, Exploratory Data Analysis (EDA), RAG, Large Language Models (LLM), Agentic AI
  Cloud Services: Elastic Container Service, CloudWatch, S3, Boto3, Bedrock, Sagemaker
 
 
@@ -38,7 +39,7 @@ Created a Loan Repayment Prognosticator proof of concept using a supervised lear
 Leveraged Python and Machine Learning to implement optimization techniques, reducing model over-fitting by 20% and increasing model accuracy and practicality.
 Developed an Internal Full Stack Web Application with Python functions and Streamlit to compare Deployment configurations, saving around 0.2 FTE per resource.
 Developed a Jenkins CI/CD Pipeline to generate Bit bucket commit and PR reports, to have a track of commits and Pull Requests based on different criteria’s.
-Built a Process automation using CI/CD pipeline to trigger a reminder mail for all the Jira issues open for a longer period of time
+Built a Process automation using CI/CD pipeline to trigger a reminder mail for all the Jira issues open over a period of time to maintain Jira hygiene 
 
 Testing projects worked upon in Barclays as a API Automation Tester
 Accessibility & Vulnerability Markers –Adapt and improve the current Eligibility Markers, and add a new Accessibility Marker (Differently-abled Customer) for Letter Delivery.
@@ -57,8 +58,22 @@ LTI (Mainframe Developer)	May 2019 – May 2022
 • Designed and developed a brand-new system known as Reason For Change (RFC) codes, which was developed to
  send a change code to customers anytime they modify their policy, saving in millions for the client
 
+Education
+
+Bachelor of Technology (B. Tech.) Engineering - Information Technology
+Easwari Engineering College (Affiliated to Anna University) July 2015 - April 2019 
+CGPA - 6.7
+
+Higher Secondary Certificate
+The Velammal International School (Chennai) July 2013 - April 2015
+Percentage - 95
+
+Secondary School Certificate
+Divine Child High School (Surat) April 2013
+CGPA - 8.4
+
 Achievements
  • Won Code-a-thon 2.0 (Dec ‘23) at Barclays for pitching ideas that would save approx. 3M GBP to the bank
  • Received ‘Most Valuable Player’ Award for the month of Sep ’21
  • Received ‘Spot Award for Quality Assurance’ for the month of Aug ’23
- • Had a own quick commerce startup called Paradox in 2018s
+ • Had a own quick commerce startup called Paradox in 2018
