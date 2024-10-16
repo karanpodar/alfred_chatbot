@@ -25,7 +25,7 @@ Technical Skills
  Manager, DB2, CICS Debugger
  Machine Learning: GenAI (Generative AI), Predictive Modelling, Prompt Engineering, Sentiment Analysis,
  Regression Algorithms, Classification Algorithms, Natural Language Processing (NLP), Feature Engineering, Data
- Visualization, Exploratory Data Analysis (EDA), RAG, Large Language Models (LLM), Agentic AI
+ Visualization, Exploratory Data Analysis (EDA), RAG, Large Language Models (LLM), Agentic AI, Vector databases
  Cloud Services: Elastic Container Service, CloudWatch, S3, Boto3, Bedrock, Sagemaker
 
 
