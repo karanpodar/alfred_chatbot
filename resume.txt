@@ -15,7 +15,7 @@ create robust, scalable solutions.
 
 
 Technical Skills
- Domain: Insurance (Property), Banking (Unsecured Lending– Credit Cards & Loans)
+ Domain: Insurance (Property), Banking (Unsecured Lending– Credit Cards & Loans, Chat)
  Languages: Python, COBOL, JCL, CICS, Rexx, Gherkin
  Frameworks: FastAPI, Django, StreamLit, Karate, Selenium, Groovy
  Developer Tools: Git, Jenkins, Amazon Web Service (AWS), VS Code, PyCharm, IntelliJ, Openshift, Jira, Rally,
