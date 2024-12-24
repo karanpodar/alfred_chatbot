@@ -7,7 +7,7 @@ Gender - Male
 
 Summary
 
-Innovative Machine Learning Engineer with 5.5+ years of experience in banking and insurance sectors. Skilled in
+Innovative Generative AI Engineer with 5.6+ years of experience in banking and insurance sectors. Skilled in
 developing AI-driven solutions that significantly improve operational efficiency and customer experience. Expertise in
 NLP, predictive modeling, and full-stack development. Proven track record of reducing costs, optimizing processes, and
 delivering high-impact projects ahead of schedule. Adept at leveraging cloud technologies and mainframe systems to
