@@ -5,7 +5,7 @@ with st.sidebar:
     st.title("🦙💬 Alfred")
     st.caption("🚀 A Chatbot for Karan's Professional Insights")
 
-    st.markdown("📝 [Access resume here.](https://drive.google.com/file/d/1JFekrXYkf0AIklVboAj-usS4MPRsGAuh/view)")
+    st.markdown("📝 [Access resume here.](https://drive.google.com/file/d/1jjch6Nrvn-ptFagiHYCrds8eDkdKQ584/view)")
     st.markdown("👾 [Access github here.](https://github.com/karanpodar)")
 
 
