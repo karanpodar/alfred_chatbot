@@ -9,7 +9,7 @@ def groq_prompt(user_prompt: str):
 
     groq_api_key = st.secrets["GROQ_API_KEY"]
     # llama_model = "llama-3.1-70b-versatile"
-    llama_mdoel = "compound-beta"
+    llama_model = "compound-beta"
 
     client = Groq(api_key=groq_api_key)
 
