@@ -8,7 +8,8 @@ def groq_prompt(user_prompt: str):
     # llama_model = "llama-3.1-8b-instant"
 
     groq_api_key = st.secrets["GROQ_API_KEY"]
-    llama_model = "llama-3.1-70b-versatile"
+    # llama_model = "llama-3.1-70b-versatile"
+    llama_mdoel = "compound-beta"
 
     client = Groq(api_key=groq_api_key)
 
@@ -111,14 +112,15 @@ def groq_prompt(user_prompt: str):
                 "content": user_prompt,
             },
             {
-                "role": "system",
+                # "role": "system",
+                "role": "assistant",
                 "content": system_prompt,
             }
         ],
         # model="llama-3.1-8b-instant",
         model=llama_model,
         temperature=0.1,
-        max_tokens=1024,
+        max_tokens=512,
     )
 
 
