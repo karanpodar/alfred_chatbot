@@ -112,8 +112,7 @@ def groq_prompt(user_prompt: str):
                 "content": user_prompt,
             },
             {
-                # "role": "system",
-                "role": "assistant",
+                "role": "system",
                 "content": system_prompt,
             }
         ],
