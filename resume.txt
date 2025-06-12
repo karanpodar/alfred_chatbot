@@ -1,93 +1,70 @@
- <contact_info>
- Karan Poddar
- phone - +91 9176204117 
- email - karanpodar@gmail.com 
- linkedin - https://www.linkedin.com/in/karan-poddar-66100413b
- github - https://github.com/karanpodar
- </contact_info>
- 
- <Summary>
- Innovative Generative AI Engineer with 6 years of experience across banking and insurance sectors. Specialized in
- developing AI-driven solutions that significantly enhance operational efficiency and customer experience. Core expertise
- in LLMs, RAG architecture, AI agents, NLP, and full-stack development. Proven track record of reducing costs (up to
- c.70%), optimizing processes, and delivering high-impact projects ahead of schedule. Adept at leveraging cloud
- technologies to create robust, scalable enterprise AI solutions.
- </Summary>
- 
- <experience>
- Position - Senior Generative AI Engineer - Barclays
- Oct 2024 – Present
- Pune, India
- • Enterprise Colleague Assistant: Designed and deployed an internal AI assistant using advanced RAG
- techniques and AI agents, increasing workforce efficiency by c.42%.
- • LLM Cost Optimization: Engineered system prompt optimizations resulting in c.69% cost reduction and 30%
- latency improvement while maintaining response quality.
- • Prompt Engineering Framework: Created a comprehensive library of prompting styles and templates to
- standardize and accelerate future GenAI implementations.
- • AI Evaluation Pipeline using Agents: Integrated evaluation tools (e.g., RAGChecker, Reflections) for
- continuous model performance tracking across relevance, factuality, and latency metrics.
- 
- Position - Machine Learning Engineer - Barclays
- May 2022– Oct 2024
- Pune, India
- • AI-powered Complaints Management: Developed and productionized a GenAI workflow system using text
- summarization and multiclass classification, reducing resolution time by c.85%.
- • LLM Response Caching System: Built an intelligent caching solution for LLM outputs, achieving c.64%
- reduction in response time and c.18% cost savings.
- • Contextual Search Engine: Designed and implemented an NLP-driven search system leveraging semantic
- similarity, improving search efficiency by c.30%.
- • Loan Default Prediction: Created a supervised learning-based loan repayment prognosticator to identify
- high-risk applicants and optimize loan affordability calculations.
- • ML Optimization: Implemented advanced regularization techniques to reduce model overfitting by c.20%,
- significantly improving model accuracy and practical applications.
- • DevOps Automation: Developed an automated Jira notification system to maintain workflow hygiene and
- ensure accurate ticket management.
- 
- Position - Mainframe Developer - LTI
- May 2019– May 2022
- Pune, India
- • Production Support Excellence: Successfully resolved 21 Production Known Errors (PKEs), significantly
- reducing customer complaint volume.
- • Regulatory Compliance Project: Delivered the California Fire-line Score 15 days ahead of schedule, preventing
- potential regulatory fines in the millions.
- • Insurance Platform Migration: Spearheaded migration from Quantum Homes to Quantum Homes 2.0,
- resulting in c.43% increase in new policy issuance.
- • Customer Communication System: Designed and implemented the Reason For Change (RFC) code system for
- policy modifications, generating millions in cost savings.
- </experience>
+<contact_info>
+Karan Poddar  
+📞 +91 9176204117  
+✉️ karanpodar@gmail.com  
+🔗 LinkedIn: https://www.linkedin.com/in/karan-poddar-66100413b  
+🐙 GitHub: https://github.com/karanpodar  
+</contact_info>
 
- <education>
- Easwari Engineering College, Chennai
- Anna University (B.Tech- IT)
- The Velammal International School, Chennai
- HSC- CBSE Board
- Divine CHild High School, Surat
- HSC- CBSE Board
- Aug 2015– April 2019
- CGPA- 6.7
- June 2013– April 2015
- Percentage- 85
- Completed in April 2013
- Percentage- 85
- </education>
+<summary>
+Innovative Generative AI Engineer with 6+ years of experience in the banking and insurance sectors. Expert in developing AI-powered solutions that significantly improve operational efficiency and customer satisfaction. Specializes in LLMs, RAG architectures, AI agents, NLP, and full-stack development. Proven ability to reduce costs (up to 70%), streamline processes, and deliver enterprise-grade projects ahead of schedule. Proficient in deploying scalable cloud-native solutions using AWS.
+</summary>
 
- <technical_skills>
- Languages: Python, COBOL, JCL, CICS, REXX, Gherkin, SQL
- Frameworks: FastAPI, Langchain, LangGraph, StreamLit, Karate, Selenium, BDD, Pytest
- Developer Tools: Git, Jenkins, VS Code, PyCharm, IntelliJ, Openshift, Jira, Rally, Confluence, BitBucket, Github
- Copilot, Gitlab Duo, Supermaven
- Libraries: pandas, NumPy, Matplotlib, scikit-learn, Tensorflow, Pytorch, Huggingface Transformers, Langchain
- Machine Learning: Predictive Modeling, Sentiment Analysis, Classification & Regression Algorithms, Clustering,
- Dimensionality Reduction, NLP, Feature Engineering, Data Visualization, EDA
- Generative AI (GenAI): AI Agents, Large Language Models, Retrieval Augmented Generation (RAG), Advanced
- RAG Techniques, Prompt Engineering & Optimization, Vector Databases
- Evaluation & Optimization: RAGChecker, RAGAs, Trulens, Prompt Tuning, Cost-Latency Tradeoff Analysis
- Cloud Services- AWS: Lambda Functions, CloudWatch, S3 Bucket, Boto3, Bedrock, Sagemaker, API Gateway,
- Aurora RDS, Event Bridge, Cloud Formation
- </technical_skills>
+<experience>
+Position: Senior Generative AI Engineer — Barclays  
+📍 Pune, India  
+🗓 Oct 2024 – Present  
+• Developed "Enterprise Colleague Assistant" using advanced RAG and AI agents, boosting internal efficiency by ~42%.  
+• Achieved ~69% cost savings and 30% latency improvement via system prompt optimization.  
+• Built a reusable prompt engineering framework to streamline GenAI implementations across the organization.  
+• Integrated evaluation pipelines (RAGChecker, Reflections) for tracking relevance, factual accuracy, and latency in LLM workflows.
 
- <achievements>
- • Won Code-a-thon 2.0 (Dec ‘23) at Barclays for pitching ideas that would save approx. 3M GBP to the bank
- • Received ‘Most Valuable Player’ Award for the month of Sep ’21
- • Received ‘Spot Award for Quality Assurance’ for the month of Aug ’23
- </achievements>
+Position: Machine Learning Engineer — Barclays  
+📍 Pune, India  
+🗓 May 2022 – Oct 2024  
+• Created GenAI-based Complaints Workflow System leveraging NLU, summarization, and multiclass classification, reducing resolution time by ~85%.  
+• Developed an LLM response caching system that cut response time by ~64% and costs by ~18%.  
+• Engineered a semantic search engine using NLP, improving enterprise search efficiency by ~30%.  
+• Designed a supervised ML model for loan default prediction to assess affordability and minimize risk.  
+• Applied advanced regularization techniques, reducing model overfitting by ~20% and improving generalization.  
+• Automated Jira notifications for enhanced DevOps pipeline monitoring and workflow hygiene.
+
+Position: Mainframe Developer — Larsen & Toubro Infotech (LTI)  
+📍 Pune, India  
+🗓 May 2019 – May 2022  
+• Resolved 21+ Production Known Errors (PKEs), improving client satisfaction and stability.  
+• Delivered the California Fire-line Score project 15 days early, averting multi-million dollar regulatory fines.  
+• Led migration from Quantum Homes to Quantum Homes 2.0, increasing new policy issuance by ~43%.  
+• Developed the "Reason for Change" (RFC) code system for insurance policy modifications, enabling significant cost savings.
+</experience>
+
+<education>
+🎓 B.Tech in Information Technology  
+Easwari Engineering College, Anna University, Chennai  
+🗓 Aug 2015 – Apr 2019 — CGPA: 6.7
+
+🏫 HSC - CBSE Board  
+The Velammal International School, Chennai  
+🗓 Jun 2013 – Apr 2015 — Percentage: 85%
+
+🏫 SSC - CBSE Board  
+Divine Child High School, Surat  
+🗓 Completed Apr 2013 — Percentage: 85%
+</education>
+
+<technical_skills>
+**Languages**: Python, COBOL, JCL, CICS, REXX, Gherkin, SQL  
+**Frameworks**: FastAPI, LangChain, LangGraph, Streamlit, Karate, Selenium, BDD, Pytest  
+**Tools**: Git, Jenkins, VS Code, PyCharm, IntelliJ, OpenShift, Jira, Rally, Confluence, Bitbucket, GitHub Copilot, GitLab Duo, Supermaven  
+**Libraries**: pandas, NumPy, Matplotlib, scikit-learn, TensorFlow, PyTorch, HuggingFace Transformers  
+**ML/AI**: Predictive Modeling, Classification, Regression, Clustering, Dimensionality Reduction, NLP, EDA, Feature Engineering  
+**Generative AI**: LLMs, AI Agents, Retrieval-Augmented Generation (RAG), Prompt Engineering, Advanced RAG Techniques, Vector DBs  
+**Evaluation & Optimization**: RAGChecker, RAGAs, TruLens, Prompt Tuning, Cost–Latency Tradeoff Analysis  
+**Cloud – AWS**: Lambda, CloudWatch, S3, Boto3, Bedrock, SageMaker, API Gateway, Aurora RDS, EventBridge, CloudFormation
+</technical_skills>
+
+<achievements>
+🏆 Winner – Code-a-thon 2.0 @ Barclays (Dec 2023), for proposing AI innovations projected to save £3M annually.  
+🏅 Most Valuable Player – Barclays (Sep 2021)  
+🎖 Spot Award for Quality Assurance – Barclays (Aug 2023)
+</achievements>
