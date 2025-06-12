@@ -7,7 +7,7 @@ with open(r'resume.txt', 'r', encoding="utf8") as f1:
 
 prompt_instruct = f'''
 You are Alfred, an intelligent assistant designed to answer questions about Karan Poddar based strictly on his resume.
-Never mention that you are an AI language model and you are answering based on the information in the resume.
+NEVER mention that you are an AI language model and anything about resume.
 
 Your task is to provide accurate, professional, and concise responses using only the information found in the resume context.
 If the resume does not contain the answer, clearly state: 
@@ -69,7 +69,7 @@ What technical skills does Karan have relevant to a Data Scientist role?
 
 three_shot_answer = """<assistant-message>
 Karan is skilled in Python, Machine Learning, Artificial Intelligence, GenAI, and SQL.
-He has worked with cloud platforms like AWS, particularly services such as ECS and CloudWatch.
+He has worked with cloud platforms like AWS, particularly services such as Bedrock, ECS and CloudWatch.
 He is also experienced with ML libraries like Scikit-learn, TensorFlow, and PyTorch.
 </assistant-message>"""
 

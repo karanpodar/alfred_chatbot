@@ -1,18 +1,22 @@
-Summary
+ <contact_info>
  Karan Poddar
  phone - +91 9176204117 
  email - karanpodar@gmail.com 
  linkedin - https://www.linkedin.com/in/karan-poddar-66100413b
  github - https://github.com/karanpodar
+ </contact_info>
+ 
+ <Summary>
  Innovative Generative AI Engineer with 6 years of experience across banking and insurance sectors. Specialized in
  developing AI-driven solutions that significantly enhance operational efficiency and customer experience. Core expertise
  in LLMs, RAG architecture, AI agents, NLP, and full-stack development. Proven track record of reducing costs (up to
  c.70%), optimizing processes, and delivering high-impact projects ahead of schedule. Adept at leveraging cloud
  technologies to create robust, scalable enterprise AI solutions.
- Experience
- Senior Generative AI Engineer
- Barclays
- Oct 2024– Present
+ </Summary>
+ 
+ <experience>
+ Position - Senior Generative AI Engineer - Barclays
+ Oct 2024 – Present
  Pune, India
  • Enterprise Colleague Assistant: Designed and deployed an internal AI assistant using advanced RAG
  techniques and AI agents, increasing workforce efficiency by c.42%.
@@ -22,8 +26,8 @@ Summary
  standardize and accelerate future GenAI implementations.
  • AI Evaluation Pipeline using Agents: Integrated evaluation tools (e.g., RAGChecker, Reflections) for
  continuous model performance tracking across relevance, factuality, and latency metrics.
- Machine Learning Engineer
- Barclays
+ 
+ Position - Machine Learning Engineer - Barclays
  May 2022– Oct 2024
  Pune, India
  • AI-powered Complaints Management: Developed and productionized a GenAI workflow system using text
@@ -38,8 +42,8 @@ Summary
  significantly improving model accuracy and practical applications.
  • DevOps Automation: Developed an automated Jira notification system to maintain workflow hygiene and
  ensure accurate ticket management.
- Mainframe Developer
- LTI
+ 
+ Position - Mainframe Developer - LTI
  May 2019– May 2022
  Pune, India
  • Production Support Excellence: Successfully resolved 21 Production Known Errors (PKEs), significantly
@@ -50,7 +54,9 @@ Summary
  resulting in c.43% increase in new policy issuance.
  • Customer Communication System: Designed and implemented the Reason For Change (RFC) code system for
  policy modifications, generating millions in cost savings.
- Education
+ </experience>
+
+ <education>
  Easwari Engineering College, Chennai
  Anna University (B.Tech- IT)
  The Velammal International School, Chennai
@@ -63,7 +69,9 @@ Summary
  Percentage- 85
  Completed in April 2013
  Percentage- 85
-Technical Skills
+ </education>
+
+ <technical_skills>
  Languages: Python, COBOL, JCL, CICS, REXX, Gherkin, SQL
  Frameworks: FastAPI, Langchain, LangGraph, StreamLit, Karate, Selenium, BDD, Pytest
  Developer Tools: Git, Jenkins, VS Code, PyCharm, IntelliJ, Openshift, Jira, Rally, Confluence, BitBucket, Github
@@ -76,7 +84,10 @@ Technical Skills
  Evaluation & Optimization: RAGChecker, RAGAs, Trulens, Prompt Tuning, Cost-Latency Tradeoff Analysis
  Cloud Services- AWS: Lambda Functions, CloudWatch, S3 Bucket, Boto3, Bedrock, Sagemaker, API Gateway,
  Aurora RDS, Event Bridge, Cloud Formation
- Achievements
+ </technical_skills>
+
+ <achievements>
  • Won Code-a-thon 2.0 (Dec ‘23) at Barclays for pitching ideas that would save approx. 3M GBP to the bank
  • Received ‘Most Valuable Player’ Award for the month of Sep ’21
  • Received ‘Spot Award for Quality Assurance’ for the month of Aug ’23
+ </achievements>
