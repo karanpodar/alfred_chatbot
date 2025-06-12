@@ -1,77 +1,82 @@
-Karan Poddar
-karanpodar@gmail.com
-+91 9176204117
-github.com/karanpodar
-birth date - 27 May 1998 (Age - 26)
-Gender - Male
-
 Summary
-
-Innovative Generative AI Engineer with 5.6+ years of experience in banking and insurance sectors. Skilled in
-developing AI-driven solutions that significantly improve operational efficiency and customer experience. Expertise in
-NLP, predictive modeling, and full-stack development. Proven track record of reducing costs, optimizing processes, and
-delivering high-impact projects ahead of schedule. Adept at leveraging cloud technologies and mainframe systems to
-create robust, scalable solutions.
-
-
+ Karan Poddar
+ phone - +91 9176204117 
+ email - karanpodar@gmail.com 
+ linkedin - https://www.linkedin.com/in/karan-poddar-66100413b
+ github - https://github.com/karanpodar
+ Innovative Generative AI Engineer with 6 years of experience across banking and insurance sectors. Specialized in
+ developing AI-driven solutions that significantly enhance operational efficiency and customer experience. Core expertise
+ in LLMs, RAG architecture, AI agents, NLP, and full-stack development. Proven track record of reducing costs (up to
+ c.70%), optimizing processes, and delivering high-impact projects ahead of schedule. Adept at leveraging cloud
+ technologies to create robust, scalable enterprise AI solutions.
+ Experience
+ Senior Generative AI Engineer
+ Barclays
+ Oct 2024– Present
+ Pune, India
+ • Enterprise Colleague Assistant: Designed and deployed an internal AI assistant using advanced RAG
+ techniques and AI agents, increasing workforce efficiency by c.42%.
+ • LLM Cost Optimization: Engineered system prompt optimizations resulting in c.69% cost reduction and 30%
+ latency improvement while maintaining response quality.
+ • Prompt Engineering Framework: Created a comprehensive library of prompting styles and templates to
+ standardize and accelerate future GenAI implementations.
+ • AI Evaluation Pipeline using Agents: Integrated evaluation tools (e.g., RAGChecker, Reflections) for
+ continuous model performance tracking across relevance, factuality, and latency metrics.
+ Machine Learning Engineer
+ Barclays
+ May 2022– Oct 2024
+ Pune, India
+ • AI-powered Complaints Management: Developed and productionized a GenAI workflow system using text
+ summarization and multiclass classification, reducing resolution time by c.85%.
+ • LLM Response Caching System: Built an intelligent caching solution for LLM outputs, achieving c.64%
+ reduction in response time and c.18% cost savings.
+ • Contextual Search Engine: Designed and implemented an NLP-driven search system leveraging semantic
+ similarity, improving search efficiency by c.30%.
+ • Loan Default Prediction: Created a supervised learning-based loan repayment prognosticator to identify
+ high-risk applicants and optimize loan affordability calculations.
+ • ML Optimization: Implemented advanced regularization techniques to reduce model overfitting by c.20%,
+ significantly improving model accuracy and practical applications.
+ • DevOps Automation: Developed an automated Jira notification system to maintain workflow hygiene and
+ ensure accurate ticket management.
+ Mainframe Developer
+ LTI
+ May 2019– May 2022
+ Pune, India
+ • Production Support Excellence: Successfully resolved 21 Production Known Errors (PKEs), significantly
+ reducing customer complaint volume.
+ • Regulatory Compliance Project: Delivered the California Fire-line Score 15 days ahead of schedule, preventing
+ potential regulatory fines in the millions.
+ • Insurance Platform Migration: Spearheaded migration from Quantum Homes to Quantum Homes 2.0,
+ resulting in c.43% increase in new policy issuance.
+ • Customer Communication System: Designed and implemented the Reason For Change (RFC) code system for
+ policy modifications, generating millions in cost savings.
+ Education
+ Easwari Engineering College, Chennai
+ Anna University (B.Tech- IT)
+ The Velammal International School, Chennai
+ HSC- CBSE Board
+ Divine CHild High School, Surat
+ HSC- CBSE Board
+ Aug 2015– April 2019
+ CGPA- 6.7
+ June 2013– April 2015
+ Percentage- 85
+ Completed in April 2013
+ Percentage- 85
 Technical Skills
- Domain: Insurance (Property), Banking (Unsecured Lending– Credit Cards & Loans, Chat)
- Languages: Python, COBOL, JCL, CICS, Rexx, Gherkin
- Frameworks: FastAPI, Django, StreamLit, Karate, Selenium, Groovy
- Developer Tools: Git, Jenkins, Amazon Web Service (AWS), VS Code, PyCharm, IntelliJ, Openshift, Jira, Rally,
- Confluence, Git, BitBucket
- Libraries: pandas, NumPy, Matplotlib, scikit-learn, Tensorflow, Pytorch
- Mainframe Tools: Endevor, VSAM, TSO, IBM File-manager, CA-File Manager, Excalibur, IBM File-Aid, ISPF, MQ
- Manager, DB2, CICS Debugger
- Machine Learning: GenAI (Generative AI), Predictive Modelling, Prompt Engineering, Sentiment Analysis,
- Regression Algorithms, Classification Algorithms, Natural Language Processing (NLP), Feature Engineering, Data
- Visualization, Exploratory Data Analysis (EDA), RAG, Large Language Models (LLM), Agentic AI, Vector databases
- Cloud Services: Elastic Container Service, CloudWatch, S3, Boto3, Bedrock, Sagemaker
-
-
-WORK EXPERIENCE
-Barclays (Machine Learning Engineer)	May 2022 – Present
-Designed and developed a Contextual Search Engine leveraging NLP, Text Similarity, and Semantic Search, improving search efficiency by 30%.
-Developed a Generative AI-based Complaints Workflow Management System utilizing NLU, text summarization, and multiclass text classification, reducing complaint resolution time by 40%.
-Created a Loan Repayment Prognosticator proof of concept using a supervised learning algorithm to prevent bank from disbursing loans to default-prone customers or refactoring affordability with high repayment risks.
-Leveraged Python and Machine Learning to implement optimization techniques, reducing model over-fitting by 20% and increasing model accuracy and practicality.
-Developed an Internal Full Stack Web Application with Python functions and Streamlit to compare Deployment configurations, saving around 0.2 FTE per resource.
-Developed a Jenkins CI/CD Pipeline to generate Bit bucket commit and PR reports, to have a track of commits and Pull Requests based on different criteria’s.
-Built a Process automation using CI/CD pipeline to trigger a reminder mail for all the Jira issues open over a period of time to maintain Jira hygiene 
-
-Testing projects worked upon in Barclays as a API Automation Tester
-Accessibility & Vulnerability Markers –Adapt and improve the current Eligibility Markers, and add a new Accessibility Marker (Differently-abled Customer) for Letter Delivery.
-Ogone Replacement – Add new Oracle DB call to existing Billing Enquiry API and remediate the existing flow.
-CRD4 Score Replacement – Replacing the existing customer scoring system with a new enhanced PD4M & Capital PD Scoring system, as a part of regulatory & compliance change.
-OMS Remediation – Remediation of existing offer management system to fix the flaws and optimize performance issues.
-Produced over 1065 repeatable automated test cases, saving almost two FTEs in total.
-
-LTI (Mainframe Developer)	May 2019 – May 2022
-• Exhibited an unwavering record of success in fixing 21 Production Known Errors (PKEs), which resulted in a
- notable drop in the volume of customer complaints
-• Delivered the California Fire-line Score fifteen days ahead of schedule. This was a significant regulatory project,
- and any problems or delays would have resulted in fines for the company amounting to millions of dollars
-• Worked on migrating the Property Insurance policies from Quantum Homes to Quantum Homes 2.0, which
- was the most competitive offering in the market increasing the number of newly issued policies by over 43%
-• Designed and developed a brand-new system known as Reason For Change (RFC) codes, which was developed to
- send a change code to customers anytime they modify their policy, saving in millions for the client
-
-Education
-
-Bachelor of Technology (B. Tech.) Engineering - Information Technology
-Easwari Engineering College (Affiliated to Anna University) July 2015 - April 2019 
-CGPA - 6.7
-
-Higher Secondary Certificate
-The Velammal International School (Chennai) July 2013 - April 2015
-Percentage - 95
-
-Secondary School Certificate
-Divine Child High School (Surat) April 2013
-CGPA - 8.4
-
-Achievements
+ Languages: Python, COBOL, JCL, CICS, REXX, Gherkin, SQL
+ Frameworks: FastAPI, Langchain, LangGraph, StreamLit, Karate, Selenium, BDD, Pytest
+ Developer Tools: Git, Jenkins, VS Code, PyCharm, IntelliJ, Openshift, Jira, Rally, Confluence, BitBucket, Github
+ Copilot, Gitlab Duo, Supermaven
+ Libraries: pandas, NumPy, Matplotlib, scikit-learn, Tensorflow, Pytorch, Huggingface Transformers, Langchain
+ Machine Learning: Predictive Modeling, Sentiment Analysis, Classification & Regression Algorithms, Clustering,
+ Dimensionality Reduction, NLP, Feature Engineering, Data Visualization, EDA
+ Generative AI (GenAI): AI Agents, Large Language Models, Retrieval Augmented Generation (RAG), Advanced
+ RAG Techniques, Prompt Engineering & Optimization, Vector Databases
+ Evaluation & Optimization: RAGChecker, RAGAs, Trulens, Prompt Tuning, Cost-Latency Tradeoff Analysis
+ Cloud Services- AWS: Lambda Functions, CloudWatch, S3 Bucket, Boto3, Bedrock, Sagemaker, API Gateway,
+ Aurora RDS, Event Bridge, Cloud Formation
+ Achievements
  • Won Code-a-thon 2.0 (Dec ‘23) at Barclays for pitching ideas that would save approx. 3M GBP to the bank
  • Received ‘Most Valuable Player’ Award for the month of Sep ’21
  • Received ‘Spot Award for Quality Assurance’ for the month of Aug ’23
- • Had a own quick commerce startup called Paradox in 2018
