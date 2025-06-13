@@ -1,0 +1,14 @@
+toxic_language-0.0.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+toxic_language-0.0.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+toxic_language-0.0.0.dist-info/METADATA,sha256=u4KTvp6gHYy-57VYC42z5efYO378YScjpPYs3msS8PQ,17992
+toxic_language-0.0.0.dist-info/RECORD,,
+toxic_language-0.0.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+toxic_language-0.0.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+toxic_language-0.0.0.dist-info/direct_url.json,sha256=Ak4CgxzzK9plk0jZVQ-NxufCkIpzVBc5_Tedfv_ZeTI,177
+toxic_language-0.0.0.dist-info/top_level.txt,sha256=iUtV3dlHOIiMfLuY4pruY00lFni8JzOkQ3Nh1II19OE,10
+validator/__init__.py,sha256=Cl9fRBr4JiEEEOlRkV-J1VcTWSMeMkKjBg5Tzu7QCPI,64
+validator/__pycache__/__init__.cpython-312.pyc,,
+validator/__pycache__/main.cpython-312.pyc,,
+validator/__pycache__/post-install.cpython-312.pyc,,
+validator/main.py,sha256=s0OFOk-bKZ3m8O46pFI2iGnUvwu9J4vvq5Z9KkdK4ns,11059
+validator/post-install.py,sha256=RitgZrOaM9qg-1ZwRk8jcp4QJNfhYHSwzzrCD9LqsKM,343

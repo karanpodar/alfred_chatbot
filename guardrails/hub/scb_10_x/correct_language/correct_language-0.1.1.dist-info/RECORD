@@ -1,0 +1,14 @@
+correct_language-0.1.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+correct_language-0.1.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+correct_language-0.1.1.dist-info/METADATA,sha256=IvyjbnmjJHy4VgMHjPMsjJi_Ri24brg1AZ3MA0KNTds,17008
+correct_language-0.1.1.dist-info/RECORD,,
+correct_language-0.1.1.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+correct_language-0.1.1.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+correct_language-0.1.1.dist-info/direct_url.json,sha256=MZxAIJdqlneiiLdUdc5F_i3TScQEpYGo_DvbxA4djL0,183
+correct_language-0.1.1.dist-info/top_level.txt,sha256=iUtV3dlHOIiMfLuY4pruY00lFni8JzOkQ3Nh1II19OE,10
+validator/__init__.py,sha256=qhB3nY2Tyeiyv1uIuUs5P2FGOoeJzWciJzUUFJt9T7Y,68
+validator/__pycache__/__init__.cpython-312.pyc,,
+validator/__pycache__/assets.cpython-312.pyc,,
+validator/__pycache__/main.cpython-312.pyc,,
+validator/assets.py,sha256=tGe-YVYa_GifUtJ4Sa4WhXeK7BlGi5NXCFkaaL3DAKs,6786
+validator/main.py,sha256=mG8WxwfWZ9Kc-JJhbV_WblRaHmVAZwCiA0RcGCAibJU,7509

@@ -1,0 +1,14 @@
+profanity_free-0.0.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+profanity_free-0.0.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+profanity_free-0.0.0.dist-info/METADATA,sha256=OPK6NfOpk27-KyadcN8gyO-BaKU6RPsctq8EAQAusTo,16701
+profanity_free-0.0.0.dist-info/RECORD,,
+profanity_free-0.0.0.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+profanity_free-0.0.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+profanity_free-0.0.0.dist-info/direct_url.json,sha256=CptsxXwZcHZLrnElIPdbiCqyscYuYgD6_Md9s84x-bA,177
+profanity_free-0.0.0.dist-info/top_level.txt,sha256=iUtV3dlHOIiMfLuY4pruY00lFni8JzOkQ3Nh1II19OE,10
+validator/__init__.py,sha256=3Cs4YYPab9fJZF5-VS16gTBwMjBP9uUbSgKFsABXGAo,64
+validator/__pycache__/__init__.cpython-312.pyc,,
+validator/__pycache__/main.cpython-312.pyc,,
+validator/__pycache__/post-install.cpython-312.pyc,,
+validator/main.py,sha256=xKIjIsgqemSqiJM_2HlKa2PkCU-WBsSNqi8324ni4T0,1626
+validator/post-install.py,sha256=ARbcUJp-9Mp5yss-UpdRq3zqzv6fUmcGYmJIZAu9GF4,288

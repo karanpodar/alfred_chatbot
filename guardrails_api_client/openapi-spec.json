@@ -1,0 +1,1850 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Guardrails API",
+    "version": "0.0.0",
+    "description": "Guardrails CRUD API"
+  },
+  "paths": {
+    "/health-check": {
+      "get": {
+        "tags": [
+          "Service Health"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the status of the server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthCheck"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/guards": {
+      "get": {
+        "operationId": "getGuards",
+        "tags": [
+          "guard"
+        ],
+        "summary": "Fetches the configuration for all Guards the user has access to.",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of Guards.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Guard"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createGuard",
+        "tags": [
+          "guard"
+        ],
+        "summary": "Creates a Guard",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Guard"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "the new Guard",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Guard"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/guards/{guardName}": {
+      "get": {
+        "operationId": "getGuard",
+        "tags": [
+          "guard"
+        ],
+        "summary": "Fetches a specific Guard",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/GuardName"
+          },
+          {
+            "$ref": "#/components/parameters/AsOf"
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "the fetched Guard",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Guard"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "operationId": "updateGuard",
+        "tags": [
+          "guard"
+        ],
+        "summary": "Updates a Guard",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/GuardName"
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Guard"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "the updated Guard",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Guard"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteGuard",
+        "tags": [
+          "guard"
+        ],
+        "summary": "Deletes a Guard",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/GuardName"
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "the deleted Guard",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Guard"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/guards/{guardName}/openai/v1/chat/completions": {
+      "post": {
+        "operationId": "openaiChatCompletion",
+        "tags": [
+          "openai"
+        ],
+        "summary": "OpenAI SDK compatible endpoint for Chat Completions",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/GuardName"
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpenAIChatCompletionPayload"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The output of the completion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpenAIChatCompletion"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/guards/{guardName}/validate": {
+      "post": {
+        "operationId": "validate",
+        "tags": [
+          "validate"
+        ],
+        "summary": "Runs the validations specified in a Guard",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/GuardName"
+          },
+          {
+            "$ref": "#/components/parameters/OpenAiApiKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidatePayload"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The output of the validation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationOutcome"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/guards/{guardName}/history/{callId}": {
+      "get": {
+        "operationId": "getGuardHistory",
+        "tags": [
+          "guard"
+        ],
+        "summary": "Fetches the history for a specific Guard execution by using the id for the most recent Call",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/GuardName"
+          },
+          {
+            "$ref": "#/components/parameters/CallId"
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "the fetched Guard History",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/call"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "authorization"
+      }
+    },
+    "parameters": {
+      "GuardName": {
+        "name": "guardName",
+        "in": "path",
+        "description": "Guard name",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "CallId": {
+        "name": "callId",
+        "in": "path",
+        "description": "Call id",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "AsOf": {
+        "name": "asOf",
+        "in": "query",
+        "description": "Used to query for data as it existed at this date and time",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "OpenAiApiKey": {
+        "name": "x-openai-api-key",
+        "in": "header",
+        "description": "A valid OpenAI API Key for calling LLM's on your behalf",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "format": "password"
+        }
+      }
+    },
+    "schemas": {
+      "OpenAIChatCompletionPayload": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "description": "The model to use for the completion",
+            "example": "gpt-3.5-turbo"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "description": "The role of the message"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "The content of the message"
+                }
+              }
+            },
+            "description": "The messages to use for the completion"
+          },
+          "max_tokens": {
+            "type": "integer",
+            "description": "The maximum number of tokens to generate"
+          },
+          "temperature": {
+            "type": "number",
+            "description": "The sampling temperature"
+          }
+        }
+      },
+      "OpenAIChatCompletion": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id"
+          },
+          "created": {
+            "type": "string",
+            "description": "The created date"
+          },
+          "model_name": {
+            "type": "string",
+            "description": "The model name"
+          },
+          "choices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "description": "The role of the message"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "The content of the message"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "created",
+          "model_name",
+          "choices"
+        ]
+      },
+      "HttpError": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "A valid http status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "A message explaining the status"
+          },
+          "cause": {
+            "type": "string",
+            "description": "Used to describe the origin of an error if that original error has meaning to the client.  This field should add specificity to 'message'."
+          },
+          "fields": {
+            "type": "object",
+            "description": "Used to identify specific fields in a JSON body that caused the error.  Typically only used for 4xx type responses.  The key should be the json path to the invalid property and the value should be a list of error messages specific to that property.",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "context": {
+            "type": "string",
+            "description": "Used to identify what part of the request caused the error for non-JSON payloads."
+          }
+        },
+        "required": [
+          "status",
+          "message"
+        ]
+      },
+      "HealthCheck": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "A valid http status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "A message explaining the status"
+          }
+        },
+        "required": [
+          "status",
+          "message"
+        ]
+      },
+      "ValidationOutcome": {
+        "$ref": "#/components/schemas/validation-outcome"
+      },
+      "primitives": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "objects": {
+        "type": "object",
+        "additionalProperties": {}
+      },
+      "arrays": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/primitives"
+            },
+            {
+              "$ref": "#/components/schemas/objects"
+            }
+          ]
+        }
+      },
+      "error-span": {
+        "title": "ErrorSpan",
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "integer"
+          },
+          "end": {
+            "type": "integer"
+          },
+          "reason": {
+            "type": "string",
+            "description": "The reason validation failed, specific to this chunk."
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "reason"
+        ]
+      },
+      "validation-summary": {
+        "title": "ValidationSummary",
+        "type": "object",
+        "properties": {
+          "validatorName": {
+            "type": "string",
+            "description": "The class name of the validator.",
+            "format": "PascalCase"
+          },
+          "validatorStatus": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail"
+            ]
+          },
+          "propertyPath": {
+            "type": "string",
+            "description": "The JSON path to the property which was validated that produced this log."
+          },
+          "failureReason": {
+            "type": "string",
+            "description": "The error message indicating why validation failed."
+          },
+          "errorSpans": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/error-span"
+            }
+          }
+        },
+        "required": [
+          "validatorName",
+          "validatorStatus"
+        ]
+      },
+      "any-type": {
+        "title": "AnyType",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/primitives"
+          },
+          {
+            "$ref": "#/components/schemas/objects"
+          },
+          {
+            "$ref": "#/components/schemas/arrays"
+          }
+        ],
+        "definitions": {
+          "primitives": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "objects": {
+            "type": "object",
+            "additionalProperties": {}
+          },
+          "arrays": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/primitives"
+                },
+                {
+                  "$ref": "#/components/schemas/objects"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "validation-result": {
+        "title": "ValidationResult",
+        "type": "object",
+        "description": "The output from a single Validator.",
+        "properties": {
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail"
+            ]
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {}
+          },
+          "validatedChunk": {
+            "$ref": "#/components/schemas/any-type"
+          }
+        },
+        "required": [
+          "outcome"
+        ]
+      },
+      "fail-result": {
+        "title": "FailResult",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/validation-result"
+          }
+        ],
+        "properties": {
+          "outcome": {
+            "const": "fail"
+          },
+          "errorMessage": {
+            "type": "string"
+          },
+          "fixValue": {
+            "$ref": "#/components/schemas/any-type"
+          },
+          "errorSpans": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/error-span"
+            }
+          }
+        },
+        "required": [
+          "outcome",
+          "errorMessage"
+        ]
+      },
+      "reask": {
+        "title": "ReAsk",
+        "type": "object",
+        "properties": {
+          "incorrectValue": {
+            "$ref": "#/components/schemas/any-type"
+          },
+          "failResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/fail-result"
+            }
+          }
+        },
+        "additionalProperties": {}
+      },
+      "validation-outcome": {
+        "title": "ValidationOutcome",
+        "description": "The output from a Guard execution.",
+        "type": "object",
+        "properties": {
+          "callId": {
+            "type": "string",
+            "description": "Foreign key to the most recent Call this resulted from."
+          },
+          "rawLlmOutput": {
+            "type": "string",
+            "description": "The raw, unchanged string content from the LLM call."
+          },
+          "validationSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/validation-summary"
+            }
+          },
+          "validatedOutput": {
+            "description": "The validated, and potentially fixed, output from the LLM call after undergoing validation.",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "additionalProperties": {}
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/any-type"
+                }
+              }
+            ]
+          },
+          "reask": {
+            "description": "If validation continuously fails and all allocated reasks are used, this field will contain the final reask that would have been sent to the LLM if additional reasks were available.",
+            "$ref": "#/components/schemas/reask"
+          },
+          "validationPassed": {
+            "description": "A boolean to indicate whether or not the LLM output passed validation.  If this is False, the validated_output may be invalid.",
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string",
+            "description": "If the validation process raised a handleable exception, this field will contain the error message."
+          }
+        },
+        "required": [
+          "callId"
+        ]
+      },
+      "Guard": {
+        "$ref": "#/components/schemas/guard"
+      },
+      "schemaArray": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "$dynamicRef": "#meta"
+        }
+      },
+      "nonNegativeInteger": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "nonNegativeIntegerDefault0": {
+        "$ref": "#/components/schemas/nonNegativeInteger",
+        "default": 0
+      },
+      "simpleTypes": {
+        "enum": [
+          "array",
+          "boolean",
+          "integer",
+          "null",
+          "number",
+          "object",
+          "string"
+        ]
+      },
+      "stringArray": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "uniqueItems": true,
+        "default": []
+      },
+      "LLMResponse": {
+        "type": "object",
+        "description": "Information from the LLM response.",
+        "properties": {
+          "promptTokenCount": {
+            "type": "integer"
+          },
+          "responseTokenCount": {
+            "type": "integer"
+          },
+          "output": {
+            "type": "string"
+          },
+          "streamOutput": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "asyncStreamOutput": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "output"
+        ]
+      },
+      "CallInputs": {
+        "title": "CallInputs",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/inputs"
+          },
+          {
+            "$ref": "#/components/schemas/args-and-kwargs"
+          }
+        ]
+      },
+      "ValidatorReference": {
+        "title": "ValidatorReference",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/args-and-kwargs"
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for this Validator.  Often the hub id; e.g. guardrails/regex_match"
+          },
+          "on": {
+            "description": "A reference to the property this validator should be applied against.  Can be a valid JSON path or a meta-property such as \"messages\" or \"output\"",
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "messages",
+                  "output"
+                ],
+                "description": "meta-property"
+              },
+              {
+                "type": "string",
+                "description": "JSON path to property; e.g. $.foo.bar"
+              }
+            ]
+          },
+          "onFail": {
+            "type": "string",
+            "enum": [
+              "exception",
+              "filter",
+              "fix",
+              "fix_reask",
+              "noop",
+              "reask",
+              "refrain",
+              "custom"
+            ],
+            "default": "noop"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "args-and-kwargs": {
+        "title": "ArgsAndKwargs",
+        "type": "object",
+        "properties": {
+          "args": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/any-type"
+            }
+          },
+          "kwargs": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        }
+      },
+      "core": {
+        "title": "Core vocabulary meta-schema",
+        "type": [
+          "object",
+          "boolean"
+        ],
+        "properties": {
+          "$anchor": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][-A-Za-z0-9._]*$"
+          },
+          "$ref": {
+            "type": "string",
+            "format": "uri-reference"
+          },
+          "$dynamicRef": {
+            "type": "string",
+            "format": "uri-reference"
+          },
+          "$dynamicAnchor": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][-A-Za-z0-9._]*$"
+          },
+          "$vocabulary": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string",
+              "format": "uri"
+            },
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
+          "$comment": {
+            "type": "string"
+          },
+          "$defs": {
+            "type": "object",
+            "additionalProperties": {
+              "$dynamicRef": "#meta"
+            },
+            "default": {}
+          }
+        },
+        "$dynamicAnchor": "meta"
+      },
+      "applicator": {
+        "title": "Applicator vocabulary meta-schema",
+        "type": [
+          "object",
+          "boolean"
+        ],
+        "properties": {
+          "prefixItems": {
+            "$ref": "#/components/schemas/schemaArray"
+          },
+          "items": {
+            "$dynamicRef": "#meta"
+          },
+          "contains": {
+            "$dynamicRef": "#meta"
+          },
+          "additionalProperties": {
+            "$dynamicRef": "#meta"
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$dynamicRef": "#meta"
+            },
+            "default": {}
+          },
+          "patternProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "$dynamicRef": "#meta"
+            },
+            "propertyNames": {
+              "format": "regex"
+            },
+            "default": {}
+          },
+          "dependentSchemas": {
+            "type": "object",
+            "additionalProperties": {
+              "$dynamicRef": "#meta"
+            }
+          },
+          "propertyNames": {
+            "$dynamicRef": "#meta"
+          },
+          "if": {
+            "$dynamicRef": "#meta"
+          },
+          "then": {
+            "$dynamicRef": "#meta"
+          },
+          "else": {
+            "$dynamicRef": "#meta"
+          },
+          "allOf": {
+            "$ref": "#/components/schemas/schemaArray"
+          },
+          "anyOf": {
+            "$ref": "#/components/schemas/schemaArray"
+          },
+          "oneOf": {
+            "$ref": "#/components/schemas/schemaArray"
+          },
+          "not": {
+            "$dynamicRef": "#meta"
+          }
+        },
+        "definitions": {
+          "schemaArray": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$dynamicRef": "#meta"
+            }
+          }
+        },
+        "$dynamicAnchor": "meta"
+      },
+      "unevaluated": {
+        "title": "Unevaluated applicator vocabulary meta-schema",
+        "type": [
+          "object",
+          "boolean"
+        ],
+        "properties": {
+          "unevaluatedItems": {
+            "$dynamicRef": "#meta"
+          },
+          "unevaluatedProperties": {
+            "$dynamicRef": "#meta"
+          }
+        },
+        "$dynamicAnchor": "meta"
+      },
+      "validation": {
+        "title": "Validation vocabulary meta-schema",
+        "type": [
+          "object",
+          "boolean"
+        ],
+        "properties": {
+          "multipleOf": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "maximum": {
+            "type": "number"
+          },
+          "exclusiveMaximum": {
+            "type": "number"
+          },
+          "minimum": {
+            "type": "number"
+          },
+          "exclusiveMinimum": {
+            "type": "number"
+          },
+          "maxLength": {
+            "$ref": "#/components/schemas/nonNegativeInteger"
+          },
+          "minLength": {
+            "$ref": "#/components/schemas/nonNegativeIntegerDefault0"
+          },
+          "pattern": {
+            "type": "string",
+            "format": "regex"
+          },
+          "maxItems": {
+            "$ref": "#/components/schemas/nonNegativeInteger"
+          },
+          "minItems": {
+            "$ref": "#/components/schemas/nonNegativeIntegerDefault0"
+          },
+          "uniqueItems": {
+            "type": "boolean",
+            "default": false
+          },
+          "maxContains": {
+            "$ref": "#/components/schemas/nonNegativeInteger"
+          },
+          "minContains": {
+            "$ref": "#/components/schemas/nonNegativeInteger",
+            "default": 1
+          },
+          "maxProperties": {
+            "$ref": "#/components/schemas/nonNegativeInteger"
+          },
+          "minProperties": {
+            "$ref": "#/components/schemas/nonNegativeIntegerDefault0"
+          },
+          "required": {
+            "$ref": "#/components/schemas/stringArray"
+          },
+          "dependentRequired": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/stringArray"
+            }
+          },
+          "const": true,
+          "enum": {
+            "type": "array",
+            "items": true
+          },
+          "type": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/simpleTypes"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/simpleTypes"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            ]
+          }
+        },
+        "definitions": {
+          "nonNegativeInteger": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "nonNegativeIntegerDefault0": {
+            "$ref": "#/components/schemas/nonNegativeInteger",
+            "default": 0
+          },
+          "simpleTypes": {
+            "enum": [
+              "array",
+              "boolean",
+              "integer",
+              "null",
+              "number",
+              "object",
+              "string"
+            ]
+          },
+          "stringArray": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true,
+            "default": []
+          }
+        },
+        "$dynamicAnchor": "meta"
+      },
+      "meta-data": {
+        "title": "Meta-data vocabulary meta-schema",
+        "type": [
+          "object",
+          "boolean"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "default": true,
+          "deprecated": {
+            "type": "boolean",
+            "default": false
+          },
+          "readOnly": {
+            "type": "boolean",
+            "default": false
+          },
+          "writeOnly": {
+            "type": "boolean",
+            "default": false
+          },
+          "examples": {
+            "type": "array",
+            "items": true
+          }
+        },
+        "$dynamicAnchor": "meta"
+      },
+      "format-annotation": {
+        "title": "Format vocabulary meta-schema for annotation results",
+        "type": [
+          "object",
+          "boolean"
+        ],
+        "properties": {
+          "format": {
+            "type": "string"
+          }
+        },
+        "$dynamicAnchor": "meta"
+      },
+      "content": {
+        "title": "Content vocabulary meta-schema",
+        "type": [
+          "object",
+          "boolean"
+        ],
+        "properties": {
+          "contentMediaType": {
+            "type": "string"
+          },
+          "contentEncoding": {
+            "type": "string"
+          },
+          "contentSchema": {
+            "$dynamicRef": "#meta"
+          }
+        },
+        "$dynamicAnchor": "meta"
+      },
+      "schema": {
+        "title": "Core and Validation specifications meta-schema",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/core"
+          },
+          {
+            "$ref": "#/components/schemas/applicator"
+          },
+          {
+            "$ref": "#/components/schemas/unevaluated"
+          },
+          {
+            "$ref": "#/components/schemas/validation"
+          },
+          {
+            "$ref": "#/components/schemas/meta-data"
+          },
+          {
+            "$ref": "#/components/schemas/format-annotation"
+          },
+          {
+            "$ref": "#/components/schemas/content"
+          }
+        ],
+        "type": [
+          "object",
+          "boolean"
+        ],
+        "properties": {
+          "definitions": {
+            "$comment": "While no longer an official keyword as it is replaced by $defs, this keyword is retained in the meta-schema to prevent incompatible extensions as it remains in common use.",
+            "type": "object",
+            "additionalProperties": {
+              "$dynamicRef": "#meta"
+            },
+            "default": {}
+          },
+          "dependencies": {
+            "$comment": "\"dependencies\" is no longer a keyword, but schema authors should avoid redefining it to facilitate a smooth transition to \"dependentSchemas\" and \"dependentRequired\"",
+            "type": "object",
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "$dynamicRef": "#meta"
+                },
+                {
+                  "$ref": "#/components/schemas/validation/definitions/stringArray"
+                }
+              ]
+            }
+          }
+        },
+        "$dynamicAnchor": "meta"
+      },
+      "inputs": {
+        "title": "Inputs",
+        "type": "object",
+        "properties": {
+          "llmApi": {
+            "type": "string",
+            "description": "The LLM resource targeted by the user. e.g. openai.chat.completions.create"
+          },
+          "llmOutput": {
+            "type": "string",
+            "description": "The string output from an external LLM call provided by the user via Guard.parse."
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": {}
+            },
+            "description": "The messages for chat models."
+          },
+          "promptParams": {
+            "type": "object",
+            "additionalProperties": {},
+            "description": "Parameters to be formatted into the messages."
+          },
+          "numReasks": {
+            "type": "integer",
+            "description": "The total number of times the LLM can be called to correct output excluding the initial call."
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {},
+            "description": "Additional data to be used by Validators during execution time."
+          },
+          "fullSchemaReask": {
+            "type": "boolean",
+            "description": "Whether to perform reasks for the entire schema rather than for individual fields."
+          },
+          "stream": {
+            "type": "boolean",
+            "description": "Whether to use streaming."
+          }
+        }
+      },
+      "pass-result": {
+        "title": "PassResult",
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/validation-result"
+          }
+        ],
+        "properties": {
+          "outcome": {
+            "const": "pass"
+          },
+          "valueOverride": {
+            "$ref": "#/components/schemas/any-type"
+          }
+        },
+        "required": [
+          "outcome"
+        ]
+      },
+      "validator-log": {
+        "title": "ValidatorLog",
+        "type": "object",
+        "properties": {
+          "validatorName": {
+            "type": "string",
+            "description": "The class name of the validator.",
+            "format": "PascalCase"
+          },
+          "registeredName": {
+            "type": "string",
+            "description": "The registry id of the validator.",
+            "format": "kebab-case"
+          },
+          "instanceId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "description": "A unique identifier for the validator that produced this log within the session."
+          },
+          "propertyPath": {
+            "type": "string",
+            "description": "The JSON path to the property which was validated that produced this log."
+          },
+          "valueBeforeValidation": {
+            "$ref": "#/components/schemas/any-type"
+          },
+          "valueAfterValidation": {
+            "$ref": "#/components/schemas/any-type"
+          },
+          "validationResult": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/pass-result"
+              },
+              {
+                "$ref": "#/components/schemas/fail-result"
+              }
+            ]
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "validatorName",
+          "registeredName",
+          "valueBeforeValidation",
+          "propertyPath"
+        ]
+      },
+      "outputs": {
+        "title": "Outputs",
+        "type": "object",
+        "properties": {
+          "llmResponseInfo": {
+            "$ref": "#/components/schemas/LLMResponse"
+          },
+          "rawOutput": {
+            "type": "string",
+            "description": "The string content from the LLM response."
+          },
+          "parsedOutput": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "additionalProperties": {}
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/any-type"
+                }
+              }
+            ]
+          },
+          "validationResponse": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/reask"
+              },
+              {
+                "type": "object",
+                "additionalProperties": {}
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/any-type"
+                }
+              }
+            ]
+          },
+          "guardedOutput": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "additionalProperties": {}
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/any-type"
+                }
+              }
+            ]
+          },
+          "reasks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/reask"
+            }
+          },
+          "validatorLogs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/validator-log"
+            }
+          },
+          "error": {
+            "type": "string",
+            "description": "The error message from any exception which interrupted the Guard execution process."
+          }
+        },
+        "definitions": {
+          "LLMResponse": {
+            "type": "object",
+            "description": "Information from the LLM response.",
+            "properties": {
+              "promptTokenCount": {
+                "type": "integer"
+              },
+              "responseTokenCount": {
+                "type": "integer"
+              },
+              "output": {
+                "type": "string"
+              },
+              "streamOutput": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "asyncStreamOutput": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "output"
+            ]
+          }
+        }
+      },
+      "iteration": {
+        "title": "Iteration",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for this Call.  Can be used as an identifier for a specific execution of a Guard."
+          },
+          "index": {
+            "type": "integer",
+            "description": "The zero-based index of this iteration within the current Call."
+          },
+          "callId": {
+            "type": "string",
+            "description": "The unique identifier for the Call that this iteration is a part of."
+          },
+          "inputs": {
+            "$ref": "#/components/schemas/inputs"
+          },
+          "outputs": {
+            "$ref": "#/components/schemas/outputs"
+          }
+        },
+        "required": [
+          "id",
+          "index",
+          "callId"
+        ]
+      },
+      "call": {
+        "title": "Call",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for this Call.  Can be used as an identifier for a specific execution of a Guard."
+          },
+          "iterations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/iteration"
+            },
+            "default": []
+          },
+          "inputs": {
+            "$ref": "#/components/schemas/CallInputs",
+            "default": {}
+          },
+          "exception": {
+            "type": "string"
+          }
+        },
+        "definitions": {
+          "CallInputs": {
+            "title": "CallInputs",
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/inputs"
+              },
+              {
+                "$ref": "#/components/schemas/args-and-kwargs"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "guard": {
+        "title": "Guard",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier for the Guard.",
+            "format": "kebab-case"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name for the Guard."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description that concisely states the expected behaviour or purpose of the Guard."
+          },
+          "validators": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidatorReference"
+            }
+          },
+          "output_schema": {
+            "$ref": "#/components/schemas/schema"
+          },
+          "history": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/call"
+            },
+            "readOnly": true
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "definitions": {
+          "ValidatorReference": {
+            "title": "ValidatorReference",
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/args-and-kwargs"
+              }
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "The unique identifier for this Validator.  Often the hub id; e.g. guardrails/regex_match"
+              },
+              "on": {
+                "description": "A reference to the property this validator should be applied against.  Can be a valid JSON path or a meta-property such as \"messages\" or \"output\"",
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "messages",
+                      "output"
+                    ],
+                    "description": "meta-property"
+                  },
+                  {
+                    "type": "string",
+                    "description": "JSON path to property; e.g. $.foo.bar"
+                  }
+                ]
+              },
+              "onFail": {
+                "type": "string",
+                "enum": [
+                  "exception",
+                  "filter",
+                  "fix",
+                  "fix_reask",
+                  "noop",
+                  "reask",
+                  "refrain",
+                  "custom"
+                ],
+                "default": "noop"
+              }
+            },
+            "required": [
+              "id"
+            ]
+          }
+        }
+      },
+      "ValidatePayload": {
+        "type": "object",
+        "properties": {
+          "llmOutput": {
+            "type": "string",
+            "description": "The LLM output as a string or the input prompts for the LLM",
+            "example": "stubbed llm output"
+          },
+          "numReasks": {
+            "type": "integer",
+            "description": "An override for the number of re-asks to perform"
+          },
+          "promptParams": {
+            "type": "object",
+            "description": "additional params for llm prompts",
+            "properties": {},
+            "additionalProperties": {}
+          },
+          "llmApi": {
+            "$ref": "#/components/schemas/LLMResource"
+          }
+        },
+        "additionalProperties": {}
+      },
+      "LLMResource": {
+        "type": "string",
+        "enum": [
+          "openai.Completion.create",
+          "openai.completions.create",
+          "openai.ChatCompletion.create",
+          "openai.chat.completions.create",
+          "openai.Completion.acreate",
+          "openai.ChatCompletion.acreate",
+          "litellm.completion",
+          "litellm.acompletion"
+        ]
+      }
+    }
+  }
+}
