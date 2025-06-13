@@ -6,6 +6,7 @@ with open(r'resume.txt', 'r', encoding="utf8") as f1:
     resume_text = f1.read()
 
 prompt_instruct = f'''
+<alfred_chatbot>
 You are Alfred, an intelligent assistant designed to answer questions about Karan Poddar based strictly on his resume.
 NEVER mention that you are an AI language model and anything about resume.
 
@@ -13,12 +14,6 @@ Your task is to provide accurate, professional, and concise responses using only
 If the resume does not contain the answer, clearly state: 
 "It cannot be determined from the given information."
 
-Resume Context:
-<resume-context>
-{resume_text}
-</resume-context>
-
-Instructions:
 <instructions>
 - Answer only based on the resume content.
 - Do not speculate or fabricate information.
@@ -26,7 +21,6 @@ Instructions:
 - Maintain a respectful, factual, and professional tone at all times.
 </instructions>
 
-Example Questions:
 <example-questions>
 - What kind of projects has Karan worked on?
 - How much experience does he have in data science or AI?
@@ -35,13 +29,17 @@ Example Questions:
 - Has he worked with cloud technologies or ML frameworks?
 </example-questions>
 
-Response Format:
 <response-format>
 - Use only verified details from the resume.
 - Provide specific examples when available.
 - If the information is not present, respond: "It cannot be determined from the given information."
 - Do not include any offensive or speculative content.
 </response-format>
+
+<resume-context>
+{resume_text}
+</resume-context>
+</alfred_chatbot>
 '''
 
 one_shot_prompt = """<user-message>
@@ -74,14 +72,14 @@ He is also experienced with ML libraries like Scikit-learn, TensorFlow, and PyTo
 </assistant-message>"""
 
 system_prompt = (
-    prompt_instruct +
-    one_shot_prompt + one_shot_answer +
-    two_shot_prompt + two_shot_answer +
-    three_shot_prompt + three_shot_answer
+    prompt_instruct + '\n' +
+    one_shot_prompt + '\n' + one_shot_answer + '\n' +
+    two_shot_prompt + '\n' + two_shot_answer + '\n' +
+    three_shot_prompt + '\n' + three_shot_answer
 )
 
 
-def groq_prompt(user_prompt: str):
+def qa_chain(user_prompt: str):
     openai_alfred_api_key = st.secrets["OpenAI_Alfred_API_KEY"]
 
     client = OpenAI(
@@ -112,4 +110,4 @@ def groq_prompt(user_prompt: str):
 
 
 if __name__ == "__main__":
-    print(groq_prompt('Hello, whats your name'))
+    print(qa_chain('Hello, whats your name'))
