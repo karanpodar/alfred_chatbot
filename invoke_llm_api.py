@@ -1,20 +1,20 @@
 from openai import OpenAI
 import streamlit as st
 import warnings
-from guardrails import Guard
-from guardrails.hub import (
-    DetectJailbreak,
-    NSFWText,
-    ProfanityFree
-)
+# from guardrails import Guard
+# from guardrails.hub import (
+#     DetectJailbreak,
+#     NSFWText,
+#     ProfanityFree
+# )
 
 
 warnings.filterwarnings("ignore")
-guard = Guard().use_many(
-    DetectJailbreak(on_fail='exception'),
-    NSFWText(on_fail='exception'),
-    ProfanityFree(on_fail='exception')
-)
+# guard = Guard().use_many(
+#     DetectJailbreak(on_fail='exception'),
+#     NSFWText(on_fail='exception'),
+#     ProfanityFree(on_fail='exception')
+# )
 
 with open(r'resume.txt', 'r', encoding="utf8") as f1:
     resume_text = f1.read()
@@ -95,11 +95,11 @@ system_prompt = (
 
 def qa_chain(user_prompt: str):
     
-    try:
-        guard.validate(user_prompt)
-    except Exception as e:
-        print(f"Guardrails validation failed: {e}")
-        return "Your input has been rejected due to inappropriate content or jailbreak."
+    # try:
+    #     guard.validate(user_prompt)
+    # except Exception as e:
+    #     print(f"Guardrails validation failed: {e}")
+    #     return "Your input has been rejected due to inappropriate content or jailbreak."
     
     openai_alfred_api_key = st.secrets["OpenAI_Alfred_API_KEY"]
     client = OpenAI(
