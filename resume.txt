@@ -1,9 +1,11 @@
 <contact_info>
-Karan Poddar  
-📞 +91 9176204117  
-✉️ karanpodar@gmail.com  
-🔗 LinkedIn: https://www.linkedin.com/in/karan-poddar-66100413b  
-🐙 GitHub: https://github.com/karanpodar  
+Karan Poddar
+📞 +91 9176204117
+✉️ karanpodar@gmail.com
+🔗 LinkedIn: https://www.linkedin.com/in/karan-poddar-66100413b
+🐙 GitHub: https://github.com/karanpodar
+Age: 27
+Date of birth: 27 May 1998
 </contact_info>
 
 <summary>
